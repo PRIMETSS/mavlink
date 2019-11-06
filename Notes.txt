@@ -1,0 +1,15 @@
+MAVLink/MAVLink is just a wrapper over pyMavLink which is the code generator project.
+
+MAVLink Message definitions in D:\DATA\MyGitHub\mavlink\message_definitions\v1.0
+Make sure to place '/' at endof Output Class folder, otherwise gen is done in root eg
+
+    D:/DATA/MyGitHub/mavlink/OutputClasses/
+
+Use 'ardupilotmega.xml' for Standard AP PIXHawk
+
+
+ByteArrayUtil Missing:
+
+    Fix:    https://github.com/ArduPilot/pymavlink/issues/151
+	This fix is done INSIDE the pyMavLink GitProject, which is inside MAVLink git repo, so changes here do not get pushed up and get a pymavlin---project-dirty. OK
+    Becuase it is another repo, EACH NEW BRANCH this modification will need to be made, as its a none merged PR
