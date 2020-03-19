@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<mavlink>  
+  <!-- LISD_LOGGER message definitions                                     -->
+  <!-- mavlink ID range 420 -                                   -->
+  <enums>
+  <enum name="LIS_LOGGER_HEARTBEAT_STATUS">
+      <entry name="OK" value="0"/>
+      <entry name="BAD" value="1"/>      
+    </enum>    
+    <enum name="LISLOGGER_LOGGER_ATOD_MODE">
+      <entry name="DUAL_DIFF" value="0"/>
+      <entry name="SINGLE" value="1"/>      
+    </enum>    
+
+ <enum name="MAV_CMD">
+      <entry value="700" name="MAV_CMD_LIS_LOGGER_START">
+        <description>Logger Start Stop.</description>
+        <param index="1">Start.</param>
+        <param index="2">Stop.</param>        
+      </entry>
+ </enum>
+
+  </enums>
+  <messages>
+   <message id="202" name="LIS_LOGGER_HEARTBEAT">
+      <description>Heartbeat from a LIS_LOGGER.</description>
+      <field type="uint8_t" name="status" enum="LIS_LOGGER_HEARTBEAT_STATUS">Status.</field>
+      <field type="uint8_t" name="atod_mode" enum="LIS_LOGGER_ATOD_MODE">Current AtoD mode.</field>      
+        <field type="float" name="lat" >Current LAT GPS Position.</field>      
+        <field type="char[50]" name="time" >Current Time string.</field>      
+    </message>    
+  </messages>
+</mavlink>

@@ -381,9 +381,13 @@
         <description>System flight controller component ("autopilot"). Only one autopilot is expected in a particular system.</description>
       </entry>
       <!-- Component ids from 25-99 are reserved for private OEM component definitions (and may be incompatible with other private components). Note that if this range is later reduced, higher ids will be reallocated first. -->
-      <entry value="25" name="MAV_COMP_ID_USER1">
-        <description>Id for a component on privately managed MAVLink network. Can be used for any purpose but may not be published by components outside of the private network.</description>
+      
+      <!-- ****************************************************************************************  -->
+      <entry value="25" name="MAV_COMP_ID_LIS_LOGGER">
+        <description>Id for LIS Data Logger.</description>
       </entry>
+      <!-- ****************************************************************************************  -->
+
       <entry value="26" name="MAV_COMP_ID_USER2">
         <description>Id for a component on privately managed MAVLink network. Can be used for any purpose but may not be published by components outside of the private network.</description>
       </entry>
