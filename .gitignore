@@ -28,3 +28,4 @@ include/
 include/mavlink/v1.0
 .idea
 OutputGenClasses
+pymavlink
